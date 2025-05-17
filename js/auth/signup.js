@@ -17,8 +17,9 @@ function validateForm() {
     const nomOk = validateRequired(inputNom);
     const prenomOk = validateRequired(inputPrenom);
     const mailOk = validateMail(inputEmail);
+    const passwordOk = validatePassword(inputPassword);
 
-    if (nomOk && prenomOk && mailOk) {
+    if (nomOk && prenomOk && mailOk && passwordOk) {
         btnValidation.disabled = false;
     }
     else {
@@ -26,6 +27,25 @@ function validateForm() {
     }
 }
 
+function validatePassword(input) {
+    //Définir mon regex, l'expression régulière
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/;
+    const passwordUser = input.value;
+    //Tester si le mot de passe est valide
+    if (passwordUser.match(passwordRegex)) {
+        //C'est ok
+        input.classList.add("is-valid");
+        input.classList.remove("is-invalid");
+        return true;
+    }
+    else {
+        //C'est pas ok
+        input.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+        return false;
+    }
+
+}
 function validateMail(input) {
     //Définir mon regex, l'expression régulière
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
