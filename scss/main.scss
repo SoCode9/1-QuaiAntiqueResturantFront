@@ -51,6 +51,35 @@ p {
     }
 }
 
-.text-justify{
+.text-justify {
     text-align: justify;
+}
+
+.image-card {
+    position: relative;
+
+    &:hover {
+        .titre-image {
+            opacity: 1;
+        }
+
+        img {
+            filter: brightness(0.3);
+        }
+    }
+
+    img {
+        transition: all 0.3s;
+
+    }
+
+    .titre-image {
+        position: absolute;
+        top: 50%; //positionner au centre
+        left: 50%; //positionner au centre
+        transform: translate(-50%, -50%); //positionner au centre
+        opacity: 0;
+        transition: all 0.3s;
+
+    }
 }

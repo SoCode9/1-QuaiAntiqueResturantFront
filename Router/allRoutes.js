@@ -3,7 +3,7 @@ import Route from "./Route.js";
 //Définir ici vos routes
 export const allRoutes = [
     new Route("/", "Accueil", "/pages/home.html"),
-    new Route("/Galerie", "Galerie", "/pages/gallery.html","/js/gallery.js"),
+    new Route("/galerie", "La galerie", "/pages/galerie.html"),
 ];
 
 //Le titre de l'onglet s'affiche comme ceci : Route.titre - websitename
