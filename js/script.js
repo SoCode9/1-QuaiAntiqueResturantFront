@@ -5,7 +5,6 @@ const apiURL = "http://127.0.0.1:8001/api/";
 
 signoutBtn.addEventListener("click", signout);
 
-
 function getRole() {
     return getCookie(RoleCookieName);
 }
@@ -107,3 +106,33 @@ function sanitizeHtml(text) {
     tempHtml.textContent = text;
     return tempHtml.innerHTML; //sert de récupérer contenu du div au format texte assaini
 }
+
+
+function getInfosUser() {
+    let myHeaders = new Headers();
+    myHeaders.append("X-AUTH-TOKEN", getToken());
+
+    let requestOptions = {
+        method: "GET",
+        headers: myHeaders,
+        redirect: "follow"
+    };
+
+    fetch(apiURL + "account/me", requestOptions)
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            else {
+                console.log("Impossible de récupérer les infos utilisateur");
+            }
+        })
+        .then(result => {
+            return result;
+
+        })
+        .catch(error => {
+            console.error("Erreur lors de la récupération des infos utilisateur", error);
+        });
+}
+
