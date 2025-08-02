@@ -17,20 +17,19 @@
         <div class="mb-3">
             <label for="AllergieInput" class="form-label">Allergies</label>
             <input type="text" class="form-control" id="AllergieInput"
-                placeholder="Vos allergies (fruits de mer, arachides, etc.)" value="Cacahuètes">
+                placeholder="Vos allergies (fruits de mer, arachides, etc.)">
         </div>
         <div class="mb-3">
             <label for="NbConvivesInput" class="form-label">Nombre de convives habituel</label>
-            <input type="number" class="form-control" id="NbConvivesInput" placeholder="Combien êtes-vous d'habitude ?"
-                value="4">
+            <input type="number" class="form-control" id="NbConvivesInput" placeholder="Combien êtes-vous d'habitude ?">
         </div>
         <div class="mb-3">
             <label for="DateInput" class="form-label">Date</label>
             <input type="date" class="form-control" id="DateInput">
         </div>
-        <div class="mb-3">
+        <div class="mb-3 radio-container">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="serviceChoisi" id="midiRadio" checked>
+                <input class="form-check-input" type="radio" name="serviceChoisi" id="midiRadio">
                 <label class="form-check-label" for="midiRadio">
                     Midi
                 </label>
@@ -43,8 +42,8 @@
             </div>
         </div>
 
-        <div class="mb-3" id="selectHourMidday">
-            <label for="DateInput" class="form-label">Heure</label>
+        <div class="mb-3 d-none" id="selectHourMidday">
+            <label for="hoursInput" class="form-label">Heure</label>
             <select class="form-select">
                 <option>11:30</option>
                 <option>11:45</option>
@@ -56,8 +55,8 @@
             </select>
         </div>
 
-        <div class="mb-3 d-none " id="selectHourEvening">
-            <label for="DateInput" class="form-label">Heure</label>
+        <div class="mb-3 d-none" id="selectHourEvening">
+            <label for="hoursInput" class="form-label">Heure</label>
             <select class="form-select">
                 <option>19:30</option>
                 <option>19:45</option>
@@ -70,7 +69,7 @@
         </div>
 
         <div class="text-center">
-            <button type="submit" class="btn btn-primary">Réserver</button>
+            <button type="submit" class="btn btn-primary" id="btn-validation" disabled>Réserver</button>
             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                 data-bs-target="#CancelModal">Annuler</button>
         </div>
