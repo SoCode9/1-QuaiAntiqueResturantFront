@@ -30,22 +30,35 @@
         </div>
         <div class="mb-3">
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="serviceChoisi" id="midiRadio">
+                <input class="form-check-input" type="radio" name="serviceChoisi" id="midiRadio" checked>
                 <label class="form-check-label" for="midiRadio">
                     Midi
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="serviceChoisi" id="soirRadio" checked>
+                <input class="form-check-input" type="radio" name="serviceChoisi" id="soirRadio">
                 <label class="form-check-label" for="soirRadio">
                     Soir
                 </label>
             </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3" id="selectHourMidday">
             <label for="DateInput" class="form-label">Heure</label>
-            <select class="form-select" id="selectHour">
+            <select class="form-select">
+                <option>11:30</option>
+                <option>11:45</option>
+                <option>12:00</option>
+                <option>12:15</option>
+                <option>12:30</option>
+                <option>12:45</option>
+                <option>13:00</option>
+            </select>
+        </div>
+
+        <div class="mb-3 d-none " id="selectHourEvening">
+            <label for="DateInput" class="form-label">Heure</label>
+            <select class="form-select">
                 <option>19:30</option>
                 <option>19:45</option>
                 <option>20:00</option>
@@ -55,6 +68,7 @@
                 <option>21:00</option>
             </select>
         </div>
+
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Réserver</button>
             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
