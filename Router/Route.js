@@ -11,8 +11,8 @@ export default class Route {
 /*
 [] --> tout le monde peut y accéder
  ["disconnected"] --> page réservée aux utilisateurs déconnectés
- ["client"] --> page réservée aux utilisateurs connectés en tant que client
- ["admin"] --> page réservée aux utilisateurs connectés en tant qu'admin
- ["client", "admin"] --> page réservée aux utilisateurs connectés en tant que client ou admin
+ ["ROLE_CLIENT"] --> page réservée aux utilisateurs connectés en tant que client
+ ["ROLE_ADMIN"] --> page réservée aux utilisateurs connectés en tant qu'admin
+ ["ROLE_CLIENT", "ROLE_ADMIN"] --> page réservée aux utilisateurs connectés en tant que client ou admin
    
 */

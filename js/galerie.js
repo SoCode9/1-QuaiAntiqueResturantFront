@@ -27,7 +27,7 @@ fetch(apiURL + "picture/restaurant/1", requestOptions)
           <div class="image-card text-white">
               <img src="${BACKEND_URL}${picture.slug}" class="rounded w-100" alt=""/>
               <p class="titre-image">${picture.title}</p>
-              <div class="action-image-buttons" data-show="admin">
+              <div class="action-image-buttons" data-show="ROLE_ADMIN">
                     <button  type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                         data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
