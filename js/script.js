@@ -64,9 +64,9 @@ function isConnected() {
 
 /**
  * disconnected
- * connected (admin ou client)
- *      - admin
- *      - client
+ * connected (ROLE_ADMIN ou ROLE_CLIENT)
+ *      - ROLE_ADMIN
+ *      - ROLE_CLIENT
  */
 function showAndHideElementsForRoles() {
     const userConnected = isConnected();
@@ -86,13 +86,13 @@ function showAndHideElementsForRoles() {
                     element.classList.add("d-none"); //BS display none
                 }
                 break;
-            case 'admin':
-                if (!userConnected || role != "admin") {
+            case 'ROLE_ADMIN':
+                if (!userConnected || role != "ROLE_ADMIN") {
                     element.classList.add("d-none"); //BS display none
                 }
                 break;
-            case 'client':
-                if (!userConnected || role != "client") {
+            case 'ROLE_CLIENT':
+                if (!userConnected || role != "ROLE_CLIENT") {
                     element.classList.add("d-none"); //BS display none
                 }
                 break;
